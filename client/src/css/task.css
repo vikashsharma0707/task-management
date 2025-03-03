@@ -1,39 +1,53 @@
+/* Table Container: Enables horizontal scrolling */
 .table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .table-custom {
-    font-size: 14px;
-  }
-  
-  .status-icon {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+/* Custom Table Styles */
+.table-custom {
+  font-size: 14px;
+  min-width: 900px; /* Ensures table width is larger for scrolling */
+}
+
+/* Image Styling for Status Icons */
+.status-icon {
+  display: block;
+  margin: auto;
+  width: 40px;
+  height: auto;
+}
+
+/* Bold Status Text */
+.status-text {
+  font-weight: bold;
+}
+
+/* Button Styling */
+.reassign-btn {
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* Small Screen Adjustments */
+@media (max-width: 768px) {
+  .table-responsive {
     display: block;
-    margin: auto;
+    overflow-x: auto;
+    white-space: nowrap;
   }
-  
-  .status-text {
-    font-weight: bold;
-  }
-  
-  .reassign-btn {
+
+  .table-custom {
     font-size: 12px;
-    padding: 4px 8px;
   }
-  
-  /* Small screen adjustments */
-  @media (max-width: 768px) {
-    .table-custom {
-      font-size: 12px;
-    }
-  
-    .reassign-btn {
-      font-size: 10px;
-      padding: 2px 6px;
-    }
-  
-    th, td {
-      white-space: nowrap;
-    }
+
+  .reassign-btn {
+    font-size: 10px;
+    padding: 2px 6px;
   }
-  
+
+  th, td {
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+}
