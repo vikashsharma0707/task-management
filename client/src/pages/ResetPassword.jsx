@@ -18,7 +18,7 @@ const ResetPassword = () => {
     }
     const handleSubmit = async (changepass) => {
         try {
-            let api = "http://localhost:8000/user/changepass";
+            let api = "https://task-management-24r6.onrender.com/user/changepass";
             const response = await axios.post(api, { userid: userid, ...input });
             alert(response.data.msg)
         } catch (error) {

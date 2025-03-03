@@ -13,7 +13,7 @@ const CreateUser = () => {
     }
     const handleSubmit = async () => {
         try {
-            let api = "http://localhost:8000/admin/usercreate";
+            let api = "https://task-management-24r6.onrender.com/admin/usercreate";
             const response = await axios.post(api, input);
             console.log(response.data);
             message.success("user Successfully Created!!!!!")

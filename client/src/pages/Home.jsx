@@ -154,10 +154,10 @@ const Home = () => {
     let storageKeys = {};
 
     if (usertype === "admin") {
-      apiUrl = "http://localhost:8000/admin/admindata";
+      apiUrl = "https://task-management-24r6.onrender.com/admin/admindata";
       storageKeys = { name: "adminName", id: "userID" };
     } else if (usertype === "user") {
-      apiUrl = "http://localhost:8000/user/userlogin";
+      apiUrl = "https://task-management-24r6.onrender.com/user/userlogin";
       storageKeys = { name: "username", id: "userid", email: "useremail" };
     } else {
       message.error("Invalid user type!");

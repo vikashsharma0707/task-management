@@ -341,7 +341,7 @@ const UserReport = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/admin/usertaskdisplay");
+        const response = await axios.get("https://task-management-24r6.onrender.com/admin/usertaskdisplay");
         setTasks(response.data || []);
       } catch (error) {
         console.error("Error fetching tasks:", error);
@@ -352,7 +352,7 @@ const UserReport = () => {
 
   const reassignTask = async (taskId) => {
     try {
-      const response = await axios.post("http://localhost:8000/admin/reasigntask", { taskId });
+      const response = await axios.post("https://task-management-24r6.onrender.com/admin/reasigntask", { taskId });
       message.success(response.data.msg || "Task reassigned successfully!");
       window.location.reload();
     } catch (error) {

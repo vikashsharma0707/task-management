@@ -25,7 +25,7 @@ const UserTaskDisplay = () => {
 
 try {
     const userid=localStorage.getItem("userid");
-    let api="http://localhost:8000/user/usertaskdisplay";
+    let api="https://task-management-24r6.onrender.com/user/usertaskdisplay";
     let response=await axios.post(api,{id:userid});
     if(response.status==200)
     {
@@ -47,7 +47,7 @@ try {
 
     const taskSubmit=async(taskid)=>{
     try {
-        let api="http://localhost:8000/user/usertasksubmit";
+        let api="https://task-management-24r6.onrender.com/user/usertasksubmit";
         const response=await axios.post(api,{taskid:taskid,taskstatus:taskStatus});
         // console.log(response.data)
         message.success(response.data);
